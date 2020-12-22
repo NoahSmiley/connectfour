@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="mycss.css">
+    <title>Connect Four</title>
+</head>
+<body>
+<div class='container'>
+
+    <h1 id="start">Welcome to Noah's Connect Four Game!</h1>
+
+    <form onsubmit="tosubmit();" action="gamescreen.html" method="POST>
+    <label for="p1">Enter Player One's Name:</label><br>
+    <input type="text" id="p1" placeholder= "Player One" required><br><br>
+    <label for="p2">Enter Player Two's Name:</label><br>
+    <input type="text" id="p2" placeholder= "Player Two"required><br><br>
+    <input type=submit value ="Play Now!">
+    </form>
+
+</div>
+
+<script type="text/JavaScript">
+
+function tosubmit() {
+    // Getting the value of your text input
+
+    var playerOne = document.getElementById("p2").value;
+    localStorage.setItem("p2", playerOne);
+    // Storing the value above into localStorage
+    
+    var playerTwo = document.getElementByID("p1").value;
+    localStorage.setItem("p1", playerTwo);
+
+    return true;
+}
+</script>
+</body>
+</html>
